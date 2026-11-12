@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101a35">
+<meta name="description" content="給快樂的一個小小星空，收藏她的畫、喜歡的動漫與音樂。">
+<title>給快樂｜願你永遠被溫柔與星光擁抱</title>
+<style>
+:root{--night:#0b1228;--blue:#172746;--gold:#f3dba8;--cream:#fff8eb;--muted:#c5cce0;--pink:#e9b8c7}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 0%,#26385e 0%,#111d38 42%,#080f22 100%);background-attachment:fixed;color:var(--cream);font-family:Georgia,"Noto Serif TC","Songti TC",serif;line-height:1.8;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.4;background-image:radial-gradient(2px 2px at 20% 30%,#fff 50%,transparent 60%),radial-gradient(1px 1px at 70% 20%,#fff 50%,transparent 60%),radial-gradient(1.5px 1.5px at 82% 68%,var(--gold) 50%,transparent 60%),radial-gradient(1px 1px at 35% 78%,#fff 50%,transparent 60%);background-size:240px 220px}
+a{color:var(--gold)}.wrap{width:min(1040px,calc(100% - 36px));margin:auto;position:relative;z-index:1}
+nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;color:var(--muted);font-size:.9rem}nav a{text-decoration:none;margin-left:18px}nav a:hover{color:#fff}
+.hero{min-height:72vh;display:grid;place-items:center;text-align:center;padding:65px 0 80px}
+.moon{width:76px;height:76px;border-radius:50%;background:var(--gold);box-shadow:0 0 35px #f3dba866,0 0 100px #f3dba833;margin:0 auto 28px}
+.eyebrow{letter-spacing:.28em;color:var(--gold);font-size:.76rem}
+h1{font-size:clamp(3rem,10vw,6rem);font-weight:400;letter-spacing:.15em;margin:5px 0 12px}
+.subtitle{font-size:clamp(1rem,3vw,1.3rem);letter-spacing:.1em;color:#f0dfc4}
+.hero p{color:var(--muted);max-width:580px;margin:25px auto 0}
+section{padding:68px 0;border-top:1px solid #ffffff18}.section-head{text-align:center;margin-bottom:30px}
+h2{font-size:clamp(1.8rem,5vw,2.4rem);font-weight:400;color:var(--gold);margin:5px 0}
+.intro{max-width:680px;margin:0 auto;text-align:center;color:var(--muted)}
+.art-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:30px}
+.art{margin:0;padding:10px;border-radius:14px;background:#ffffff0b;border:1px solid #ffffff20;overflow:hidden}
+.art img{width:100%;height:290px;object-fit:contain;background:#f3eee6;border-radius:8px;display:block}
+figcaption{color:var(--muted);font-size:.88rem;text-align:center;padding:10px 4px 2px}
+.anime-card{display:grid;grid-template-columns:minmax(180px,300px) 1fr;gap:28px;align-items:center;max-width:760px;margin:auto;padding:16px;background:#ffffff0b;border:1px solid #ffffff20;border-radius:18px}
+.anime-placeholder{min-height:260px;border-radius:12px;background:linear-gradient(145deg,#35466b,#171f3b);display:grid;place-items:center;color:#f3dba8;text-align:center;padding:20px}
+.anime-card h3{color:var(--gold);font-size:1.5rem;font-weight:400;margin:0 0 10px}.anime-card p{color:var(--muted)}
+.music{max-width:700px;margin:auto;text-align:center;padding:30px;border:1px solid #ffffff25;border-radius:18px;background:linear-gradient(135deg,#ffffff0c,#ffffff04)}
+.sun{font-size:2.5rem}.song{font-size:1.4rem;color:var(--gold);margin:8px 0 0}.artist{color:var(--muted);margin:0}
+.memory{max-width:700px;margin:24px auto 0;padding:22px;border:1px solid #ffffff20;border-radius:16px;background:#ffffff08;text-align:center;color:var(--muted)}
+.note{max-width:700px;margin:auto;text-align:center;font-size:1.12rem;color:#f1dfc5}
+.button{display:inline-block;text-decoration:none;padding:9px 20px;border:1px solid #f3dba899;border-radius:999px;margin-top:16px}
+footer{text-align:center;padding:48px 0 60px;color:var(--muted);font-size:.85rem}.heart{color:var(--pink)}
+@media(max-width:620px){nav{display:block;text-align:center}nav div:last-child{margin-top:8px}nav a{margin:0 8px}.hero{min-height:65vh}.anime-card{grid-template-columns:1fr;max-width:390px}.art img{height:260px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <div>✦ FOR KUAI LE ✦</div>
+  <div><a href="index.html">首頁</a><a href="#art">她的畫</a><a href="#anime">動漫</a><a href="#music">音樂盒</a></div>
+</nav>
+<header class="hero">
+  <div>
+    <div class="moon" aria-hidden="true"></div>
+    <div class="eyebrow">A LITTLE UNIVERSE FOR YOU</div>
+    <h1>給快樂</h1>
+    <div class="subtitle">願你永遠被溫柔與星光擁抱</div>
+    <p>這裡有你親手畫下的世界、你喜歡的角色，還有那首想一再聽見的歌。願每一份喜歡，都被好好收藏。</p>
+    <a class="button" href="index.html">← 回到星光收藏所首頁</a>
+  </div>
+</header>
+<section id="art">
+  <div class="section-head"><div class="eyebrow">YOUR COLORS</div><h2>她筆下的星河</h2></div>
+  <p class="intro">每一筆，都是快樂的想像；每一張畫，都留下了她看世界的方式。這些是她親手創作的作品，值得被珍藏。</p>
+  <div class="art-grid">
+    <figure class="art"><img src="images/art-1.jpg" alt="快樂的畫作一" onerror="this.style.display='none'"><figcaption>她的畫作 · 一</figcaption></figure>
+    <figure class="art"><img src="images/art-2.jpg" alt="快樂的畫作二" onerror="this.style.display='none'"><figcaption>她的畫作 · 二</figcaption></figure>
+    <figure class="art"><img src="images/art-3.jpg" alt="快樂的畫作三" onerror="this.style.display='none'"><figcaption>她的畫作 · 三</figcaption></figure>
+  </div>
+  <p class="intro" style="margin-top:18px;font-size:.88rem">圖片位置：把畫作放進 images 資料夾，並分別命名為 art-1.jpg、art-2.jpg、art-3.jpg。</p>
+</section>
+<section id="anime">
+  <div class="section-head"><div class="eyebrow">A STORY SHE LIKES</div><h2>她喜歡的動漫</h2></div>
+  <div class="anime-card">
+    <div class="anime-placeholder">✧<br>把她喜歡的角色圖片放在這裡<br><small>images/anime.jpg</small></div>
+    <div>
+      <h3>和栗薰子</h3>
+      <p>來自《薰香花朵凛然綻放》。把喜歡的角色與故事留在這裡，讓這份喜愛也成為星空的一部分。</p>
+      <p>有些故事之所以珍貴，是因為曾經有人真心喜歡過。</p>
+    </div>
+  </div>
+</section>
+<section id="music">
+  <div class="section-head"><div class="eyebrow">A SONG TO KEEP</div><h2>她的音樂盒</h2></div>
+  <div class="music">
+    <div class="sun" aria-hidden="true">☀</div>
+    <p class="song">《太陽與地球（Sun &amp; Earth）》</p>
+    <p class="artist">盧廣仲</p>
+    <p class="intro">把這首歌留在這裡。當旋律再次響起，就讓它陪我們在星光下停留一會兒。</p>
+  </div>
+</section>
+<section id="memory">
+  <div class="section-head"><div class="eyebrow">LITTLE MOMENTS</div><h2>一起留下的回憶</h2></div>
+  <p class="note">有些回憶不需要華麗的文字。一張合照、一段遊戲時光，或一句只有彼此懂的話，都值得被珍惜。</p>
+  <div class="memory">你們在 Roblox 裡一起留下的那張合照<br><small>可以把圖片放進 images 資料夾，命名為 roblox-memory.jpg，再加入這個區塊。</small></div>
+</section>
+<section>
+  <p class="note">願你喜歡的顏色、故事與旋律，都一直有地方安放。<br>願你永遠被溫柔與星光擁抱。 <span class="heart">♥</span></p>
+</section>
+<footer>為快樂收藏的一片小小星空<br><a href="index.html">回到首頁</a></footer>
+</div>
+</body>
+</html>
