@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101a35">
+<meta name="description" content="給快樂的一個小小星空，收藏她的畫、喜歡的動漫、音樂與一起留下的回憶。">
+<title>給快樂｜願你永遠被溫柔與星光擁抱</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&display=swap');
+:root{--bg:#101a35;--pink:#f4b9d1;--light:#fff1f7;--gold:#ead7a5;--text:#f8edf5;--muted:#c5bfd4}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Serif TC',serif;color:var(--text);background:radial-gradient(ellipse at 15% 15%,#29375e 0%,transparent 40%),radial-gradient(ellipse at 85% 55%,#352849 0%,transparent 42%),linear-gradient(150deg,#101a35,#17172e 60%,#242039);line-height:1.9;overflow-x:hidden}
+a{color:inherit;text-decoration:none}button{font:inherit}
+.stars{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.55;background-image:radial-gradient(1px 1px at 10% 20%,white 99%,transparent),radial-gradient(2px 2px at 30% 70%,white 99%,transparent),radial-gradient(1px 1px at 75% 30%,white 99%,transparent),radial-gradient(2px 2px at 90% 80%,white 99%,transparent),radial-gradient(1px 1px at 55% 50%,white 99%,transparent),radial-gradient(1px 1px at 20% 90%,white 99%,transparent);background-size:230px 230px;animation:twinkle 7s ease-in-out infinite alternate}
+@keyframes twinkle{from{opacity:.25}to{opacity:.8}}
+header,main,footer{position:relative;z-index:1}
+nav{position:sticky;top:0;z-index:10;display:flex;justify-content:center;flex-wrap:wrap;gap:22px;padding:13px 12px;background:rgba(13,20,43,.85);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.09)}
+nav a{font-size:13px;color:#e9dce9;transition:.3s}nav a:hover{color:var(--pink)}
+.hero{min-height:90vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:75px 20px}
+.hero .flower{color:var(--pink);font-size:35px;animation:float 4s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-12px)}}
+.hero h1{font-size:clamp(30px,7vw,54px);font-weight:500;letter-spacing:5px;margin:18px 0;background:linear-gradient(90deg,#fff,#f4b9d1,#ead7a5);background-clip:text;-webkit-background-clip:text;color:transparent}
+.hero .subtitle{font-size:15px;color:var(--muted);letter-spacing:3px}
+.hero .intro{max-width:540px;margin-top:30px;color:#eee1ed;font-size:15px;line-height:2.3}
+.scroll{margin-top:55px;color:var(--pink);font-size:13px;animation:float 3s infinite}
+section{max-width:1050px;margin:auto;padding:75px 22px}
+.section-title{text-align:center;margin-bottom:40px}
+.section-title .en{color:var(--gold);font-size:11px;letter-spacing:5px;text-transform:uppercase}
+.section-title h2{font-size:26px;font-weight:500;letter-spacing:3px;margin:8px 0}
+.section-title p{color:var(--muted);font-size:13px}
+.divider{text-align:center;color:var(--pink);margin:20px 0;letter-spacing:8px}
+.message-card{max-width:760px;margin:auto;padding:35px 28px;border:1px solid rgba(244,185,209,.28);background:rgba(255,255,255,.045);border-radius:18px;text-align:center;box-shadow:0 15px 45px rgba(0,0,0,.15)}
+.message-card p{font-size:15px;line-height:2.5;color:#f1e6ef}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.photo-card{overflow:hidden;border-radius:15px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);transition:transform .35s,box-shadow .35s}
+.photo-card:hover{transform:translateY(-6px);box-shadow:0 15px 35px rgba(0,0,0,.25)}
+.photo-card img{display:block;width:100%;height:260px;object-fit:cover;transition:transform .5s;cursor:pointer}
+.photo-card:hover img{transform:scale(1.04)}
+.photo-card .caption{text-align:center;padding:13px 10px;color:#f5d9e8;font-size:13px}
+.roblox-card{max-width:700px;margin:35px auto 0}
+.roblox-card img{height:auto;max-height:450px;object-fit:contain;background:rgba(0,0,0,.2)}
+.music-box{max-width:680px;margin:auto;text-align:center;border:1px solid rgba(234,215,165,.3);background:linear-gradient(135deg,rgba(244,185,209,.1),rgba(234,215,165,.06));border-radius:20px;padding:35px 25px}
+.music-icon{font-size:45px;margin-bottom:10px}.music-box h3{font-size:21px;font-weight:500}
+.music-box p{font-size:13px;color:var(--muted);margin:10px 0 22px}
+.music-link{display:inline-block;padding:10px 26px;border:1px solid var(--pink);color:var(--light);border-radius:30px;font-size:13px;transition:.3s}
+.music-link:hover{background:var(--pink);color:#242039}
+.music-note{font-size:12px;color:#bdb4cb;margin-top:18px}
+.memory-list{max-width:680px;margin:auto;display:grid;gap:16px}
+.memory-item{padding:19px 23px;background:rgba(255,255,255,.045);border-left:2px solid var(--pink);border-radius:8px}
+.memory-item h3{font-size:15px;color:var(--pink);font-weight:500}
+.memory-item p{font-size:13px;color:var(--muted);margin-top:5px}
+.note-box{max-width:680px;margin:auto;padding:30px;border-radius:18px;background:rgba(255,255,255,.045);border:1px solid rgba(244,185,209,.23)}
+.note-box label{display:block;color:var(--pink);font-size:13px;margin-bottom:8px}
+.note-box input,.note-box textarea{display:block;width:100%;padding:12px 14px;border:1px solid rgba(255,255,255,.17);background:rgba(10,15,35,.5);color:white;border-radius:9px;margin-bottom:17px;outline:none;font:inherit;font-size:13px}
+.note-box textarea{min-height:110px;resize:vertical}
+.note-box input:focus,.note-box textarea:focus{border-color:var(--pink)}
+.submit-btn{padding:10px 28px;border:none;border-radius:30px;background:linear-gradient(100deg,#edb4d0,#ead7a5);color:#292039;cursor:pointer;transition:.3s}
+.submit-btn:hover{transform:translateY(-2px);box-shadow:0 5px 20px rgba(244,185,209,.25)}
+.notes{margin-top:28px;display:grid;gap:12px}
+.note{padding:15px;background:rgba(255,255,255,.06);border-radius:10px;overflow-wrap:anywhere}
+.note strong{color:var(--pink);font-size:13px}.note p{color:#e6dce9;font-size:13px;margin-top:5px}
+.home-link{display:inline-block;padding:11px 27px;border:1px solid rgba(244,185,209,.55);border-radius:30px;font-size:13px;color:#f7dce9;transition:.3s}
+.home-link:hover{background:rgba(244,185,209,.17)}
+footer{text-align:center;padding:55px 20px 35px;color:var(--muted);font-size:12px;border-top:1px solid rgba(255,255,255,.08)}
+footer .heart{color:var(--pink);font-size:20px}footer .footer-text{margin-top:12px;letter-spacing:2px}
+@media(max-width:600px){nav{gap:12px}nav a{font-size:11px}.hero{min-height:78vh}.gallery{grid-template-columns:1fr}.photo-card img{height:250px}section{padding:55px 17px}.message-card{padding:27px 18px}.note-box{padding:22px 17px}}
+.lightbox{display:none;position:fixed;z-index:100;inset:0;background:rgba(5,8,20,.94);align-items:center;justify-content:center;padding:20px}
+.lightbox.show{display:flex}.lightbox img{max-width:95%;max-height:85vh;object-fit:contain;border-radius:10px}
+.lightbox button{position:absolute;top:20px;right:25px;border:0;background:none;color:white;font-size:32px;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="stars"></div>
+<header>
+<nav>
+<a href="#home">首頁</a><a href="#about">給你的話</a><a href="#anime">喜歡的動漫</a><a href="#art">你的畫</a><a href="#memory">一起的時光</a><a href="#music">音樂盒</a><a href="#notes">星空留言</a>
+</nav>
+</header>
+<main>
+<div class="hero" id="home">
+<div class="flower">✿</div><p class="subtitle">A LITTLE UNIVERSE FOR YOU</p>
+<h1>給快樂</h1><p class="subtitle">願你永遠被溫柔與星光擁抱</p>
+<div class="divider">✧ ─── ☾ ─── ✧</div>
+<p class="intro">這裡有你喜歡的動漫、你親手畫下的作品，<br>有我們一起留下的時光，還有你喜歡的音樂。<br><br>這不是一本告別的書，<br>而是一個可以隨時回來的小小星空。<br><br>願每一天，都有值得期待的小小快樂。</p>
+<a href="#about" class="scroll">向下探索　↓</a>
+</div>
+<section id="about">
+<div class="section-title"><div class="en">A LETTER FOR YOU</div><h2>想對你說的話</h2><p>有些溫柔，值得一直珍藏</p></div>
+<div class="message-card"><p>親愛的快樂：<br><br>我希望你知道，你喜歡的東西都值得被好好收藏。<br>你的畫、你的笑容、你喜歡的動漫，<br>還有那些看起來平凡，卻很珍貴的小小日常。<br><br>不需要每天都很勇敢，<br>也不需要一直保持開心。<br>累了就休息，想說話的時候就說話。<br><br>願這個小小的角落，<br>能帶給你一點溫暖、一點陪伴，<br>還有很多很多值得期待的明天。<br><br><span style="color:#f4b9d1">一直希望你能被世界溫柔以待。 ♡</span></p></div>
+</section>
+<section id="anime">
+<div class="section-title"><div class="en">YOUR FAVORITE WORLD</div><h2>你喜歡的動漫</h2><p>收藏那些讓你心動的畫面</p></div>
+<div class="gallery"><div class="photo-card"><img src="anime.jpg" alt="喜歡的動漫" onclick="openLightbox(this.src)"><div class="caption">✿ 喜歡的動漫</div></div></div>
+</section>
+<section id="art">
+<div class="section-title"><div class="en">MADE BY YOU</div><h2>你的畫作收藏</h2><p>每一筆，都是獨一無二的小宇宙</p></div>
+<div class="gallery">
+<div class="photo-card"><img src="art-1.jpg" alt="快樂的畫作一" onclick="openLightbox(this.src)"><div class="caption">✿ 你的作品 · 01</div></div>
+<div class="photo-card"><img src="art-2.jpg" alt="快樂的畫作二" onclick="openLightbox(this.src)"><div class="caption">✿ 你的作品 · 02</div></div>
+<div class="photo-card"><img src="art-3.jpg" alt="快樂的畫作三" onclick="openLightbox(this.src)"><div class="caption">✿ 你的作品 · 03</div></div>
+<div class="photo-card"><img src="art-4.jpg" alt="快樂的畫作四" onclick="openLightbox(this.src)"><div class="caption">✿ 你的作品 · 04</div></div>
+</div>
+</section>
+<section id="memory">
+<div class="section-title"><div class="en">OUR LITTLE MEMORIES</div><h2>一起留下的時光</h2><p>那些簡單卻很珍貴的回憶</p></div>
+<div class="message-card"><p>有些時光不需要多麼特別，<br>只要一起玩過、一起笑過，<br>就已經值得好好收藏。<br><br>謝謝你，讓這些普通的日子，<br>有了不普通的意義。</p></div>
+<div class="photo-card roblox-card"><img src="roblox-memory.jpg" alt="我們在 Roblox 裡的合影" onclick="openLightbox(this.src)"><div class="caption">♡ 我們在 Roblox 裡的合影 · 一起玩過的時光</div></div>
+<div class="memory-list" style="margin-top:30px">
+<div class="memory-item"><h3>✧ 一起玩過的遊戲</h3><p>那些一起探索、一起冒險的小時光。</p></div>
+<div class="memory-item"><h3>✧ 一起分享的喜歡</h3><p>動漫、畫畫、音樂，還有很多有趣的事情。</p></div>
+<div class="memory-item"><h3>✧ 還有很多未來</h3><p>願我們還能一起創造更多值得珍藏的回憶。</p></div>
+</div>
+</section>
+<section id="music">
+<div class="section-title"><div class="en">MUSIC BOX</div><h2>星空音樂盒</h2><p>讓喜歡的旋律，陪伴每一個時刻</p></div>
+<div class="music-box"><div class="music-icon">🎵</div><h3>太陽與地球</h3><p>盧廣仲 · 一首想與你分享的歌</p>
+<a class="music-link" href="https://y.qq.com/n/ryqq/search?w=%E7%9B%A7%E5%BB%A3%E4%BB%B2%20%E5%A4%AA%E9%99%BD%E8%88%87%E5%9C%B0%E7%90%83" target="_blank" rel="noopener noreferrer">♫ 在 QQ 音樂聆聽</a>
+<div class="music-note">點擊後即可前往 QQ 音樂搜尋歌曲。</div></div>
+</section>
+<section id="notes">
+<div class="section-title"><div class="en">MESSAGES UNDER THE STARS</div><h2>星空留言區</h2><p>想說的話，都可以留在這片星空下</p></div>
+<div class="note-box">
+<label for="nickname">你的名字</label><input id="nickname" type="text" maxlength="30" placeholder="留下你的暱稱……">
+<label for="message">想說的話</label><textarea id="message" maxlength="500" placeholder="寫下一句溫柔的話吧……"></textarea>
+<button class="submit-btn" onclick="addNote()">✧ 留下星星</button><div id="notesList" class="notes"></div>
+</div>
+</section>
+<section style="text-align:center;padding-top:25px">
+<div class="divider">✧ ─── ♡ ─── ✧</div>
+<p style="color:#d6c9dc;font-size:14px;margin-bottom:22px">星光一直都在，溫柔也一直都在。</p>
+<a href="index.html" class="home-link">← 返回有聲小說首頁</a>
+</section>
+</main>
+<footer><div class="heart">♡</div><p>給快樂的一個小小星空</p><p class="footer-text">MAY YOUR DAYS BE FILLED WITH GENTLENESS</p><p style="margin-top:18px">Made with love · 2026</p></footer>
+<div class="lightbox" id="lightbox" onclick="closeLightbox()"><button aria-label="關閉圖片" onclick="closeLightbox()">×</button><img id="lightboxImage" src="" alt="放大圖片" onclick="event.stopPropagation()"></div>
+<script>
+function openLightbox(src){document.getElementById('lightboxImage').src=src;document.getElementById('lightbox').classList.add('show')}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('show')}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLightbox()});
+const STORAGE_KEY='happy_starry_notes_v1';
+function getNotes(){try{return JSON.parse(localStorage.getItem(STORAGE_KEY))||[]}catch(e){return[]}}
+function renderNotes(){
+const list=document.getElementById('notesList');const notes=getNotes();list.replaceChildren();
+notes.slice().reverse().forEach(function(item){
+const card=document.createElement('div');card.className='note';
+const name=document.createElement('strong');name.textContent='✧ '+item.name;
+const content=document.createElement('p');content.textContent=item.message;
+card.appendChild(name);card.appendChild(content);list.appendChild(card);
+});
+}
+function addNote(){
+const nameInput=document.getElementById('nickname');const messageInput=document.getElementById('message');
+const name=nameInput.value.trim()||'一位朋友';const message=messageInput.value.trim();
+if(!message){alert('先寫下一句想說的話吧 ♡');return}
+const notes=getNotes();notes.push({name:name,message:message,date:new Date().toISOString()});
+try{localStorage.setItem(STORAGE_KEY,JSON.stringify(notes))}catch(e){alert('無法保存留言，請檢查瀏覽器儲存空間。');return}
+nameInput.value='';messageInput.value='';renderNotes();
+}
+renderNotes();
+</script>
+</body>
+</html>
